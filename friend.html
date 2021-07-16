@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/11ba3eb7d8.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        
+        <div class = "header_top">
+        
+                <span class="header_name">친구</span>
+                <nav>
+
+                <i class="fas fa-search"></i>
+                <i class="fas fa-user-plus"></i>
+                <i class="fas fa-music"></i>
+                <i class="fas fa-cog"></i>
+            </nav>
+            
+        </div>
+            
+     
+   
+        <main class="friends">
+            <section class="user">
+                <li>
+                    <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/7r5X/image/9djEiPBPMLu_IvCYyvRPwmZkM1g.jpg" width="70" height="70">
+                    <div class="profile">
+                        <p>손지은</p>
+                        <p></p>
+                    </div>
+                    </li>  
+                
+            </section>
+
+            <section class="friends_birth">
+                
+                    <h6>생일인 친구</h6>
+                    <li>
+                    <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/7r5X/image/9djEiPBPMLu_IvCYyvRPwmZkM1g.jpg" width="70" height="70">
+                    <div class="profile">
+                        <p>정지선</p>
+                        <p>HBD</p>
+                    </div>
+                    </li>
+            
+
+            </section>
+            <section class="friends_bookmark">
+                
+                    <h6>즐겨찾기</h6>
+                    <li>
+                    <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/7r5X/image/9djEiPBPMLu_IvCYyvRPwmZkM1g.jpg"width="70" height="70">
+                                <div class="profile">
+                                    <p>신혜수</p>
+                                    <p>즐겨찾기에 등록해줘</p>
+                                </div>
+                    </li>
+                
+            </section>
+            <section class="channel">
+                
+                    <h6>채널</h6>
+                    <li>
+                    <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/7r5X/image/9djEiPBPMLu_IvCYyvRPwmZkM1g.jpg"width="70" height="70">
+                        <div class="profile">
+                            <p>정영현</p>
+                            <p>설빙 채널</p>
+                        </div>
+                    </li>
+                    
+                
+            </section>
+
+            <section class="friends_each">
+                
+                
+                        <h6 >친구 333</h6>
+                        <li>
+                        <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/7r5X/image/9djEiPBPMLu_IvCYyvRPwmZkM1g.jpg"width="70" height="70">
+                        <div class="profile">
+                            <p>음휘영</p>
+                            <p>랑이 보고싶다ㅜㅜ</p>
+                                
+                    
+                            </div>
+                        </li>
+                    <li>
+                        <img src="https://img1.daumcdn.net/thumb/R1280x0.fjpg/?fname=http://t1.daumcdn.net/brunch/service/user/7r5X/image/9djEiPBPMLu_IvCYyvRPwmZkM1g.jpg" width="70" height="70">
+                        <div class="profile">
+                            <p>최혁순</p>
+                            <p>나 오늘 백신 맞음</p>
+                            
+                        </div>
+                        <h5>죠지 - boat</h5>
+                    </li>
+                    
+            </section>
+        </main>
+
+
+        <div class="bottom">
+        
+            <i class="fas fa-user"></i>
+            <a href="chat.html" class="click">
+                <i class="fas fa-comment"></i>
+            </a>
+            <i class="fas fa-hashtag"></i>
+            <i class="fas fa-shopping-bag"></i>
+            <i class="fas fa-ellipsis-h"></i>
+        
+ 
+        </div>
+ </div>
+
+  
+</body>
+
+</html>
+<style>
+
+li{
+    /* 각각의 프로필을 flex box로 구성 */
+    display: flex;
+    flex-direction: row;
+    vertical-align: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-bottom: 0.625rem; /* 16 브라우저 기준 20px */
+    margin-top: 0.625rem; /* 16 브라우저 기준 10px */
+}
+
+.profile :first-of-type{
+    margin-left: 0.625rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+/* 두 번째 p span으로 쓰니까 칸 벗어나더라 */
+.profile :nth-of-type(2){
+    margin-left: 0.625rem;
+    font-size: 0.75rem;
+
+
+}
+li h5{
+    margin-left: auto;
+}
+
+    .container{
+        border: 1px black;
+        width: 800px;
+        height: 1200px;
+        display: grid;
+       
+        grid-template-rows: [header_top]0.2fr 2fr 0.2fr;
+        grid-template-areas:
+        "header_top"
+        "friends"
+        "bottom"
+        ;
+        gap: 10px 10px;
+        column-gap: 10px;
+        
+        
+    }
+    
+    .header_top{
+       
+       
+       display: flex;
+       grid-area: header_top;
+        
+        /* position: fixed; */
+        font-size : 30px;
+        margin-top: 30px;   
+        background-color: white;     
+    }
+    .header_top nav{
+        font-size: 20px;
+        margin-top: 0.825rem;
+        /* align-items: right; 이거 왜 안 먹히냐 */
+        /* float: right; */
+        margin-left: auto;
+        
+
+       
+    }
+    .header_top i{
+        margin-left: 15px;
+    }
+   
+   
+   
+    .friends{
+        grid-area: friends;
+        /* display:grid; */
+        /* grid-template-rows : 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 2fr; */
+        background-color: rgb(255, 255, 255);
+        margin-left: 2px;
+       
+    }
+    
+    
+    .bottom{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        
+        display: flex;
+        grid-area: bottom;
+        position: sticky;
+        background-color: rgb(235, 231, 231);
+        text-align: center;
+        font-size: 30px;
+        justify-content: space-between;
+        vertical-align: center;
+    }
+    .bottom i{
+        margin-top:30px;
+        margin-left: 0.95rem;
+        margin-right: 0.95rem;
+    }
+
+
+    .friends_each{
+        border-top: 1px solid rgb(202,200,200);
+        padding-top: 0.125rem;
+    }
+    .friends_birth{
+        border-top: 1px solid rgb(202,200,200);
+        padding-top: 0.125rem;
+
+    }
+    
+    .friends_bookmark{
+        border-top: 1px solid rgb(202,200,200);
+        padding-top: 0.125rem;
+    }
+    .channel{
+        border-top: 1px solid rgb(202,200,200);
+        padding-top: 0.125rem;
+    }
+</style>
