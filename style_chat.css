@@ -1,0 +1,36 @@
+.myChat {
+  width: 800px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.urChat {
+  width: 800px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.myChatArea {
+  margin-right: 15px;
+  width: 100px;
+  height: 60px;
+  background-color: #fde40e;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.urChatArea {
+  margin-left: 15px;
+  width: 100px;
+  height: 60px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
