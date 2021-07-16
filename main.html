@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* 전체 화면 크기 조정 */
+        body{
+            width : 800px;
+            height: 1200px;
+            border:5px solid gray;
+        }
+        /* 그리드 화면으로 구성 */
+        #grid{
+           
+            display:grid;
+            height : 1200px;
+            grid-template-columns:100px 1fr;
+        }
+        /* 전체 list 스타일 구성 */
+        ul li{
+            list-style-type: none;
+            text-decoration: none;
+            float:left;
+            padding-left : 0;
+            padding-bottom:30px;
+        }
+       /* 사이드 메뉴 구성 */
+        .menu{
+            background-color: rgb(218, 214, 214);    
+        }
+        /* 상단 메뉴 구성 */
+        .head{
+            height: 130px;
+            border-bottom: 1px solid grey;
+        }
+        
+        .top_setting{
+            float :right;
+            margin-right:10px;
+            padding:0px;
+        }
+        .top-chat1{
+            float:right;
+            margin-top:40px;
+
+        }
+        /* 채팅에 마우스를 올리면 하위메뉴 popup */
+        .submenu { /* 하위 메뉴 스타일 설정 */ 
+            
+            position: absolute; /* html의 flow에 영향을 미치지 않게 absolute 설정 */ 
+            height: 0px; /* 초기 높이는 0px로 설정 */
+            overflow: hidden; /* 실 내용이 높이보다 커지면 해당 내용 감춤 */ 
+            
+        } 
+
+         .topMenuLi:hover .submenu { /* 상위 메뉴에 마우스 모버한 경우 그 안의 하위 메뉴 스타일 설정 */ 
+            border: 1px solid gray;
+            background-color: white;
+            margin-top: 60px;
+            height: 250px; /* 높이를 93px로 설정 */ 
+            width : 150px;
+            padding : 0;
+         }
+         /* 스크롤바의 모양 변경 */
+         .bottom::-webkit-scrollbar{
+             width : 10px;
+             
+         }
+         .bottom::-webkit-scrollbar-thumb{
+            background-color: grey;
+            border-radius: 10px;
+            
+         }
+         .bottom::-webkit-scrollbar-track{
+
+            background-color: white;
+            border-radius: 10px;
+            
+         }
+        
+         /* 채팅창 구성 */
+         .box{
+             display: grid;
+             grid-template-columns: 140px 450px auto;
+             border:1px solid pink;
+             height: 150px;
+         }
+         .index{
+             width : 130px;
+         }
+
+    </style>
+</head>
+<body>
+    <div id= "grid">
+        <div class = "menu">
+            <div class="nav_items"style="margin-top : 80px; ">
+                <ul>
+                    <li><a href="/"><i class="fas fa-user fa-3x"></i></a></li>
+                    <li><a href="/"><i class="fas fa-comment fa-3x"></i></a></li>
+                    <li><a href="/"><i class="fas fa-ellipsis-h fa-3x"></i> </a></li>
+                </ul>
+    
+            </div>
+            <div class="nav_setting" style="margin-top : 900px;">
+                <ul>
+                    <li><a href="/"><i class="far fa-smile fa-3x"></i></a></li>
+                    <li><a href="/"><i class="far fa-smile fa-3x"></i></a></li>
+                    <li><a href="/"><i class="fas fa-cog fa-3x"></i></a></li>
+                </ul>
+            </div>
+           
+            
+        </div>
+        <div>
+            <div class = "head">
+                <div class = "top_setting">
+                    <ul>
+                        <li><a href="/">ㅡ </a></li>
+                        <li><a href="/">ㅁ </a></li>
+                        <li><a href="/">X </a></li>
+                    </ul>
+                </div>
+                <div class="top-chat">
+                    <ul>
+                        <li style="font-size: 30px; float : center; margin-top: 60px;" class = "topMenuLi">
+                            채팅
+                            <ul class = "submenu"  style="font-size: 20px; float = center; margin : 0; ">
+                                <li>최신메세지순</li>
+                                <li>안 읽은 메세지 순</li>
+                                <li style="border-bottom: 1px solid gray;">즐겨찾기 순</li>
+                                <li>모두 읽음 처리</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="top-chat1" >
+                    <ul>
+                        <li><a href="/"><i class="fas fa-search fa-3x"></i></a></li>
+                        <li><a href="/"><i class="far fa-comments fa-3x"></i></a></li>
+                        <li><a href="/"><i class="far fa-comment-dots fa-3x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class = "bottom" style="overflow: auto; width:700px; height:1050px;">
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">음휘영</p>
+                        <p>음휘영 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">혁순쓰</p>
+                        <p>혁순쓰 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">지은지은~!</p>
+                        <p>지은지은~! 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">지선이</p>
+                        <p>지선이 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">얌얌</p>
+                        <p>얌얌 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">음휘영</p>
+                        <p>음휘영 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">음휘영</p>
+                        <p>음휘영 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">음휘영</p>
+                        <p>음휘영 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">음휘영</p>
+                        <p>음휘영 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+                <div class = box>
+                    <div class = "index" >
+                        <img src="image.png" style= "width:140px;" >
+                    </div>
+                    <div>
+                        <p style = "font-size: 30px;">음휘영</p>
+                        <p>음휘영 님이 이모티콘을 보냈습니다.</p>
+                    </div> 
+                    <div >
+                        <p style="font-size: 15px; color:gray">2021-07-10</p>
+                    </div>
+                </div>
+               
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
